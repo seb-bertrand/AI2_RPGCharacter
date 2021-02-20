@@ -1,0 +1,111 @@
+﻿<Window x:Class="RPGCharacter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RPGCharacter"
+        mc:Ignorable="d"
+        Title="RPG Character" Height="800" Width="650" >
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <StackPanel>          
+            <Grid Margin="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*" />
+                    <ColumnDefinition Width="50*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Content="Nom :" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="0" />
+                <TextBox x:Name="txtFirstName" VerticalAlignment="Center"  Grid.Row="0" Grid.Column="1" />
+
+                <Label Content="Prénom :" VerticalAlignment="Center" FontWeight="Bold"  Grid.Row="1" Grid.Column="0" />
+                <TextBox x:Name="txtLastName" VerticalAlignment="Center"  Grid.Row="1" Grid.Column="1" />
+
+                <Label Content="Classe :" FontWeight="Bold" Grid.Row="2" Grid.Column="0" />
+                <ListBox SelectionChanged="LstClasses_SelectionChanged" x:Name="LstClasses" SelectionMode="Single" Grid.Row="2" Grid.Column="1"  />
+            </Grid>
+
+            <Grid HorizontalAlignment="Center" Margin="0,50,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="150" />
+
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="3" Grid.Column="0">
+                    <Label Content="Force" FontWeight="Bold" HorizontalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
+                        <Button Content="&lt;" Width="25" Height="25" />
+                        <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" x:Name="LbForce" />
+                        <Button Content="&gt;" Width="25" Height="25" />
+                    </StackPanel>                    
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <Label Content="Dextérité" FontWeight="Bold" HorizontalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
+                        <Button Content="&lt;" Width="25" />
+                        <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" x:Name="LbDextérité" />
+                        <Button Content="&gt;" Width="25" />
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="0" Grid.Column="1" >
+                    <Label Content="Constitution" FontWeight="Bold" HorizontalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
+                        <Button Content="&lt;" Width="25" />
+                        <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center"  />
+                        <Button Content="&gt;" Width="25" />
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="0" Grid.Column="2">
+                    <Label Content="Intelligence" FontWeight="Bold"  HorizontalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
+                        <Button Content="&lt;" Width="25" />
+                        <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" />
+                        <Button Content="&gt;" Width="25" />
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Grid.Column="3">
+                    <Label Content="Sagesse" FontWeight="Bold"  HorizontalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
+                        <Button Content="&lt;" Width="25" />
+                        <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" />
+                        <Button Content="&gt;" Width="25" />
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" Grid.Column="3" >
+                    <Label Content="Charisme" FontWeight="Bold" HorizontalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
+                        <Button Content="&lt;" Width="25" />
+                        <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" />
+                        <Button Content="&gt;" Width="25" />
+                    </StackPanel>
+                </StackPanel>
+
+                <Image x:Name="ImgClass" Height="250" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center"  />
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
