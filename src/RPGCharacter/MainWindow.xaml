@@ -14,14 +14,19 @@
         </ResourceDictionary>
     </Window.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-        <StackPanel>
-            
-            <Border Padding="15" x:Name="FormBorder" BorderBrush="Black" BorderThickness="0,0,0,2.5" Background="{DynamicResource SelectedClassBackground}">
+        <DockPanel>
+            <StackPanel x:Name="Menu" DockPanel.Dock="Left" Style="{StaticResource MenuPanel}">
+                <TextBlock Text="{StaticResource ApplicationName}" Style="{StaticResource MenuTitleStyle}" />
+                <StackPanel Style="{StaticResource MenuButtonPanel}">
+                    <Button Content="Infos" Style="{StaticResource MenuButtonStyle}" />
+                    <Button Content="Caractéristiques" Style="{StaticResource MenuButtonStyle}" />
+                </StackPanel>               
+            </StackPanel>
+            <Border Padding="15" x:Name="FormBorder" BorderBrush="Black" BorderThickness="0,0,0,2.5" Background="{DynamicResource SelectedClassBackground}" DockPanel.Dock="Top">
                 <Grid Margin="15" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50*" />
                         <ColumnDefinition Width="50*" />
-
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -50,7 +55,7 @@
                     </ListBox>
                 </Grid>
             </Border>
-            <Grid HorizontalAlignment="Center" Margin="0,50,0,0" >
+            <Grid HorizontalAlignment="Center" Margin="0,50,0,0" DockPanel.Dock="Top" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="150" />
                     <ColumnDefinition Width="150" />
@@ -71,10 +76,7 @@
                 <StackPanel Grid.Row="3" Grid.Column="0">
                     <Label Content="Force" FontWeight="Bold" HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
-                        <Button Width="25" Height="25" Style="{StaticResource AbilityButtonStyle}" >
-                            <Image Source="/Images/Barbare_Icon.png" />
-
-                        </Button>
+                        <Button Content="&lt;" Width="25" Height="25" Style="{StaticResource AbilityButtonStyle}" />
                         <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" x:Name="LbForce" />
                         <Button Content="&gt;" Width="25" Height="25" Style="{StaticResource AbilityButtonStyle}" />
                     </StackPanel>                    
@@ -127,6 +129,6 @@
 
                 <Image x:Name="ImgClass" Height="250" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center"  />
             </Grid>
-        </StackPanel>
+        </DockPanel>
     </ScrollViewer>
 </Window>
