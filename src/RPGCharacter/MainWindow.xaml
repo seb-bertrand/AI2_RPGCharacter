@@ -5,34 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPGCharacter"
         mc:Ignorable="d"
-        Title="RPG Character" Height="800" Width="650" >
+        Title="{StaticResource ApplicationName}" Height="800" Width="650" >
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-        <StackPanel>          
-            <Grid Margin="15">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50*" />
-                    <ColumnDefinition Width="50*" />
+        <StackPanel>
+            <Border Padding="15" x:Name="FormBorder" BorderBrush="Black" BorderThickness="0,0,0,2.5" Background="{DynamicResource SelectedClassBackground}">
+                <Grid Margin="15" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="50*" />
 
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-                <Label Content="Nom :" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="0" />
-                <TextBox x:Name="txtFirstName" VerticalAlignment="Center"  Grid.Row="0" Grid.Column="1" />
+                    <Label Content="Nom :" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="0" />
+                    <TextBox x:Name="txtFirstName" VerticalAlignment="Center"  Grid.Row="0" Grid.Column="1" />
 
-                <Label Content="Prénom :" VerticalAlignment="Center" FontWeight="Bold"  Grid.Row="1" Grid.Column="0" />
-                <TextBox x:Name="txtLastName" VerticalAlignment="Center"  Grid.Row="1" Grid.Column="1" />
+                    <Label Content="Prénom :" VerticalAlignment="Center" FontWeight="Bold"  Grid.Row="1" Grid.Column="0" />
+                    <TextBox x:Name="txtLastName" VerticalAlignment="Center"  Grid.Row="1" Grid.Column="1" />
 
-                <Label Content="Classe :" FontWeight="Bold" Grid.Row="2" Grid.Column="0" />
-                <ListBox SelectionChanged="LstClasses_SelectionChanged" x:Name="LstClasses" SelectionMode="Single" Grid.Row="2" Grid.Column="1"  />
-            </Grid>
-
-            <Grid HorizontalAlignment="Center" Margin="0,50,0,0">
+                    <Label Content="Classe :" FontWeight="Bold" Grid.Row="2" Grid.Column="0" />
+                    <ListBox SelectionChanged="LstClasses_SelectionChanged" x:Name="LstClasses" SelectionMode="Single" Grid.Row="2" Grid.Column="1"  />
+                </Grid>
+            </Border>
+            <Grid HorizontalAlignment="Center" Margin="0,50,0,0" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="150" />
                     <ColumnDefinition Width="150" />

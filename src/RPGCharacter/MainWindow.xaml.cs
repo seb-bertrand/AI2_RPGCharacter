@@ -31,7 +31,7 @@ namespace RPGCharacter
             InitializeClasses();
             this.DataContext = this;
             LstClasses.SelectedIndex = 0;
-            
+               
         }
 
         private void InitializeClasses()
