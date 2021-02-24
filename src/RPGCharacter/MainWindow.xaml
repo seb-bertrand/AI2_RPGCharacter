@@ -71,9 +71,17 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="{Binding ElementName=txtFirstName, Path=Text, Mode=OneWay}" FontSize="24" />
+                    <Label Content="{Binding ElementName=txtLastName, Path=Text,  Mode=OneWay}" FontSize="24" />
+                </StackPanel>
+                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" 
+                       Content="{Binding ElementName=LstClasses, Path=SelectedItem.Label}" FontSize="14" />
 
-                <StackPanel Grid.Row="3" Grid.Column="0">
+                <StackPanel Grid.Row="5" Grid.Column="0">
                     <Label Content="Force" FontWeight="Bold" HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
                         <Button Content="&lt;" Width="25" Height="25" Style="{StaticResource AbilityButtonStyle}" />
@@ -82,7 +90,7 @@
                     </StackPanel>                    
                 </StackPanel>
 
-                <StackPanel Grid.Row="1" Grid.Column="0">
+                <StackPanel Grid.Row="3" Grid.Column="0">
                     <Label Content="Dextérité" FontWeight="Bold" HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
                         <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
@@ -91,7 +99,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Grid.Row="0" Grid.Column="1" >
+                <StackPanel Grid.Row="2" Grid.Column="1" >
                     <Label Content="Constitution" FontWeight="Bold" HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
                         <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
@@ -100,7 +108,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Grid.Row="0" Grid.Column="2">
+                <StackPanel Grid.Row="2" Grid.Column="2">
                     <Label Content="Intelligence" FontWeight="Bold"  HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
                         <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
@@ -109,7 +117,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Grid.Row="1" Grid.Column="3">
+                <StackPanel Grid.Row="3" Grid.Column="3">
                     <Label Content="Sagesse" FontWeight="Bold"  HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
                         <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
@@ -118,7 +126,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Grid.Row="3" Grid.Column="3" >
+                <StackPanel Grid.Row="5" Grid.Column="3" >
                     <Label Content="Charisme" FontWeight="Bold" HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
                         <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
@@ -127,7 +135,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <Image x:Name="ImgClass" Height="250" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center"  />
+                <Image x:Name="ImgClass" Height="250" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center"  />
             </Grid>
         </DockPanel>
     </ScrollViewer>
