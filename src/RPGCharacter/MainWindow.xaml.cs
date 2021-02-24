@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RPGCharacter.Models;
 
 namespace RPGCharacter
 {
@@ -20,10 +21,11 @@ namespace RPGCharacter
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string _imageFolder = "/Images/";
-        private string _imageExtension = ".jpg";
+        private const string _imageFolder = "/Images/";
+        private const string _imageExtension = ".jpg";
+        private const string _iconExtension = ".png";
 
-        public List<string> Classes { get; set; }
+        public List<CharacterClass> Classes { get; set; }
         public string SelectedClassImage { get; set; }
         public MainWindow()
         {
@@ -36,19 +38,19 @@ namespace RPGCharacter
 
         private void InitializeClasses()
         {
-            Classes = new List<string>
+            Classes = new List<CharacterClass>
             {
-                "Barbare",
-                "Barde",
-                "Druide",
-                "Ensorceleur",
-                "Guerrier",
-                "Magicien",
-                "Moine",
-                "Paladin",
-                "Pretre",
-                "Rodeur",
-                "Roublard"
+                new CharacterClass("Barbare",_imageFolder, _iconExtension),
+                new CharacterClass("Barde",_imageFolder, _iconExtension),
+                new CharacterClass("Druide",_imageFolder, _iconExtension),
+                new CharacterClass("Ensorceleur",_imageFolder, _iconExtension),
+                new CharacterClass("Guerrier",_imageFolder, _iconExtension),
+                new CharacterClass("Magicien",_imageFolder, _iconExtension),
+                new CharacterClass("Moine",_imageFolder, _iconExtension),
+                new CharacterClass("Paladin",_imageFolder, _iconExtension),
+                new CharacterClass("Pretre",_imageFolder, _iconExtension),
+                new CharacterClass("Rodeur",_imageFolder, _iconExtension),
+                new CharacterClass("Roublard",_imageFolder, _iconExtension)
             };
 
             LstClasses.ItemsSource = Classes;

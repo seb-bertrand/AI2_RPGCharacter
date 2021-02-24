@@ -8,51 +8,95 @@
 
   <ItemGroup>
     <None Remove="Images\Barbare.jpg" />
+    <None Remove="Images\Barbare_Icon.png" />
     <None Remove="Images\Barde.jpg" />
+    <None Remove="Images\Barde_Icon.png" />
     <None Remove="Images\Druide.jpg" />
+    <None Remove="Images\Druide_Icon.png" />
     <None Remove="Images\Ensorceleur.jpg" />
+    <None Remove="Images\Ensorceleur_Icon.png" />
     <None Remove="Images\Guerrier.jpg" />
+    <None Remove="Images\Guerrier_Icon.png" />
     <None Remove="Images\Magicien.jpg" />
+    <None Remove="Images\Magicien_Icon.png" />
     <None Remove="Images\Moine.jpg" />
+    <None Remove="Images\Moine_Icon.png" />
     <None Remove="Images\Paladin.jpg" />
+    <None Remove="Images\Paladin_Icon.png" />
     <None Remove="Images\Pretre.jpg" />
+    <None Remove="Images\Pretre_Icon.png" />
     <None Remove="Images\Rodeur.jpg" />
+    <None Remove="Images\Rodeur_Icon.png" />
     <None Remove="Images\Roublard.jpg" />
+    <None Remove="Images\Roublard_Icon.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Images\Barbare.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Barbare_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Barde.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Barde_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Druide.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Druide_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Ensorceleur.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Ensorceleur_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Guerrier.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Guerrier_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Magicien.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Magicien_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Moine.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Moine_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Paladin.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Paladin_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Pretre.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Pretre_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Rodeur_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Roublard.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Rodeur.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Roublard_Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

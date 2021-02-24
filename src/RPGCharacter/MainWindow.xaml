@@ -7,10 +7,15 @@
         mc:Ignorable="d"
         Title="{StaticResource ApplicationName}" Height="800" Width="650" >
     <Window.Resources>
-        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/StyleDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
         <StackPanel>
+            
             <Border Padding="15" x:Name="FormBorder" BorderBrush="Black" BorderThickness="0,0,0,2.5" Background="{DynamicResource SelectedClassBackground}">
                 <Grid Margin="15" >
                     <Grid.ColumnDefinitions>
@@ -33,7 +38,16 @@
                     <TextBox x:Name="txtLastName" VerticalAlignment="Center"  Grid.Row="1" Grid.Column="1" />
 
                     <Label Content="Classe :" FontWeight="Bold" Grid.Row="2" Grid.Column="0" />
-                    <ListBox SelectionChanged="LstClasses_SelectionChanged" x:Name="LstClasses" SelectionMode="Single" Grid.Row="2" Grid.Column="1" />
+                    <ListBox SelectionChanged="LstClasses_SelectionChanged" x:Name="LstClasses" SelectionMode="Single" Grid.Row="2" Grid.Column="1" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{Binding ClassIcon}" Width="25" Height="25" />
+                                    <TextBlock Text="{Binding Label}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </Grid>
             </Border>
             <Grid HorizontalAlignment="Center" Margin="0,50,0,0" >
@@ -57,54 +71,57 @@
                 <StackPanel Grid.Row="3" Grid.Column="0">
                     <Label Content="Force" FontWeight="Bold" HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0">
-                        <Button Content="&lt;" Width="25" Height="25" />
+                        <Button Width="25" Height="25" Style="{StaticResource AbilityButtonStyle}" >
+                            <Image Source="/Images/Barbare_Icon.png" />
+
+                        </Button>
                         <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" x:Name="LbForce" />
-                        <Button Content="&gt;" Width="25" Height="25" />
+                        <Button Content="&gt;" Width="25" Height="25" Style="{StaticResource AbilityButtonStyle}" />
                     </StackPanel>                    
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Grid.Column="0">
                     <Label Content="Dextérité" FontWeight="Bold" HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
-                        <Button Content="&lt;" Width="25" />
+                        <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                         <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" x:Name="LbDextérité" />
-                        <Button Content="&gt;" Width="25" />
+                        <Button Content="&gt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Grid.Row="0" Grid.Column="1" >
                     <Label Content="Constitution" FontWeight="Bold" HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
-                        <Button Content="&lt;" Width="25" />
+                        <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                         <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center"  />
-                        <Button Content="&gt;" Width="25" />
+                        <Button Content="&gt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Grid.Row="0" Grid.Column="2">
                     <Label Content="Intelligence" FontWeight="Bold"  HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
-                        <Button Content="&lt;" Width="25" />
+                        <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                         <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" />
-                        <Button Content="&gt;" Width="25" />
+                        <Button Content="&gt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Grid.Column="3">
                     <Label Content="Sagesse" FontWeight="Bold"  HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
-                        <Button Content="&lt;" Width="25" />
+                        <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                         <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" />
-                        <Button Content="&gt;" Width="25" />
+                        <Button Content="&gt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Grid.Row="3" Grid.Column="3" >
                     <Label Content="Charisme" FontWeight="Bold" HorizontalAlignment="Center" />
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
-                        <Button Content="&lt;" Width="25" />
+                        <Button Content="&lt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                         <Label Width="40" Height="25" Content="10" HorizontalContentAlignment="Center" />
-                        <Button Content="&gt;" Width="25" />
+                        <Button Content="&gt;" Width="25" Style="{StaticResource AbilityButtonStyle}" />
                     </StackPanel>
                 </StackPanel>
 
