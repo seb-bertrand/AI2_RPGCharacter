@@ -23,7 +23,7 @@
                 </StackPanel>               
             </StackPanel>
             <Border Padding="15" x:Name="FormBorder" BorderBrush="Black" BorderThickness="0,0,0,2.5" Background="{DynamicResource SelectedClassBackground}" DockPanel.Dock="Top">
-                <WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
                     <StackPanel Style="{StaticResource FormSectionPanel}">
                         <StackPanel>
                             <Label Content="Nom"  Style="{StaticResource FormLabel}" />
