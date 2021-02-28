@@ -2,51 +2,51 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:RPGCharacter.Resources">
     <LinearGradientBrush x:Key="SelectedClassBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#795548"/>
-        <GradientStop Offset="1" Color="#4E342E"/>
+        <GradientStop Offset="0.1" Color="#757575"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="BarbareBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#795548"/>
-        <GradientStop Offset="1" Color="#4E342E"/>
+        <GradientStop Offset="0.1" Color="#757575"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="BardeBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#388E3C"/>
-        <GradientStop Offset="1" Color="#4E342E"/>
+        <GradientStop Offset="0.1" Color="#673AB7"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="DruideBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#388E3C"/>
-        <GradientStop Offset="1" Color="#1B5E20"/>
+        <GradientStop Offset="0.1" Color="#4CAF50"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="EnsorceleurBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#0277BD"/>
-        <GradientStop Offset="1" Color="#BF360C"/>
+        <GradientStop Offset="0.1" Color="#BF360C"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="GuerrierBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#A1887F"/>
-        <GradientStop Offset="1" Color="#0D47A1"/>
+        <GradientStop Offset="0.1" Color="#607D8B"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>        
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="MagicienBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#1E88E5"/>
-        <GradientStop Offset="1" Color="#1A237E"/>
+        <GradientStop Offset="0.1" Color="#3F51B5"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="MoineBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#BDBDBD"/>
-        <GradientStop Offset="1" Color="#0D47A1"/>
+        <GradientStop Offset="0.1" Color="#2196F3"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="PaladinBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#BDBDBD"/>
-        <GradientStop Offset="1" Color="#b71c1c"/>
+        <GradientStop Offset="0.1" Color="#f44336"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="PretreBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#1565C0"/>
-        <GradientStop Offset="1" Color="#0D47A1"/>
+        <GradientStop Offset="0.1" Color="#03A9F4"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="RodeurBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#4CAF50"/>
-        <GradientStop Offset="1" Color="#1B5E20"/>
+        <GradientStop Offset="0.1" Color="#795548"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
     <LinearGradientBrush x:Key="RoublardBackground" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Offset="0.5" Color="#7B1FA2"/>
-        <GradientStop Offset="1" Color="#4A148C"/>
+        <GradientStop Offset="0.1" Color="#6A1B9A"/>
+        <GradientStop Offset="1" Color="#BDBDBD"/>
     </LinearGradientBrush>
 </ResourceDictionary>

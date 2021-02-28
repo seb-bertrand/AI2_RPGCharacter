@@ -13,7 +13,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" >
         <DockPanel>
             <StackPanel x:Name="Menu" DockPanel.Dock="Left" Style="{StaticResource MenuPanel}">
                 <TextBlock Text="{StaticResource ApplicationName}" Style="{StaticResource MenuTitleStyle}" />
@@ -23,37 +23,24 @@
                 </StackPanel>               
             </StackPanel>
             <Border Padding="15" x:Name="FormBorder" BorderBrush="Black" BorderThickness="0,0,0,2.5" Background="{DynamicResource SelectedClassBackground}" DockPanel.Dock="Top">
-                <Grid Margin="15" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="50*" />
-                        <ColumnDefinition Width="50*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-
-                    <Label Content="Nom :" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="0" />
-                    <TextBox x:Name="txtFirstName" VerticalAlignment="Center"  Grid.Row="0" Grid.Column="1" />
-
-                    <Label Content="Prénom :" VerticalAlignment="Center" FontWeight="Bold"  Grid.Row="1" Grid.Column="0" />
-                    <TextBox x:Name="txtLastName" VerticalAlignment="Center"  Grid.Row="1" Grid.Column="1" />
-
-                    <Label Content="Classe :" FontWeight="Bold" Grid.Row="2" Grid.Column="0" />
-                    <ListBox SelectionChanged="LstClasses_SelectionChanged" x:Name="LstClasses" SelectionMode="Single" Grid.Row="2" Grid.Column="1" >
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="{Binding ClassIcon}" Width="25" Height="25" />
-                                    <TextBlock Text="{Binding Label}" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </Grid>
+                <WrapPanel>
+                    <StackPanel Style="{StaticResource FormSectionPanel}">
+                        <StackPanel>
+                            <Label Content="Nom"  Style="{StaticResource FormLabel}" />
+                            <TextBox x:Name="txtFirstName" Style="{StaticResource FormTextBox}"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <Label Content="Prénom" Style="{StaticResource FormLabel}"  />
+                            <TextBox x:Name="txtLastName" Style="{StaticResource FormTextBox}" />
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource FormSectionPanel}">
+                        <Label Content="Classe" Style="{StaticResource FormLabel}" />
+                        <ListBox x:Name="LstClasses" SelectionMode="Single" 
+                                 SelectionChanged="LstClasses_SelectionChanged"                                  
+                                 ItemTemplate="{StaticResource LstClassesDataTemplate}" />
+                    </StackPanel>
+                </WrapPanel>
             </Border>
             <Grid HorizontalAlignment="Center" Margin="0,50,0,0" DockPanel.Dock="Top" >
                 <Grid.ColumnDefinitions>
