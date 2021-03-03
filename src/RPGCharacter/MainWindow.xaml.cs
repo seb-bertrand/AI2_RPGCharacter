@@ -51,6 +51,7 @@ namespace RPGCharacter
             DataContext = this;
             LstClasses.SelectedIndex = 0;
             Character = new Character();
+            Character.Class = Classes.First();
         }
 
         private void InitializeClasses()
@@ -74,12 +75,8 @@ namespace RPGCharacter
         }
 
         private void LstClasses_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            SelectedClassImage = _imageFolder + LstClasses.SelectedItem.ToString() + _imageExtension;
-            ImgClass.Source = new BitmapImage(new Uri(SelectedClassImage, UriKind.Relative));
-
+        {           
             string className = LstClasses.SelectedItem.ToString();
-
             string resourceName = className + "Background";
             App.Current.Resources["SelectedClassBackground"] = App.Current.Resources[resourceName];
         }

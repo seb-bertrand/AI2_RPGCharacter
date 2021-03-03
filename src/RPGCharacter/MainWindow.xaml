@@ -123,7 +123,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <Image x:Name="ImgClass" Source="{Binding }" Height="250" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center"  />
+                <Image x:Name="ImgClass" Source="{Binding Character.Class.ClassImage}" Height="250" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center"  />
             </Grid>
         </DockPanel>
     </ScrollViewer>

@@ -35,7 +35,20 @@ namespace RPGCharacter.Models
                 OnPropertyChanged();
             }
         }
-        public CharacterClass Class { get; set; }
+
+        private CharacterClass _class;
+        public CharacterClass Class
+        {
+            get
+            {
+                return _class;
+            }
+            set
+            {
+                _class = value;
+                OnPropertyChanged();
+            }
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
