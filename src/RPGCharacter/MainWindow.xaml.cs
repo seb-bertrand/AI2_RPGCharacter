@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -42,21 +43,22 @@ namespace RPGCharacter
 
         
 
-        public List<CharacterClass> Classes { get; set; }
+        public ObservableCollection<CharacterClass> Classes { get; set; }
         public string SelectedClassImage { get; set; }
         public MainWindow()
         {
             InitializeComponent();
             InitializeClasses();
-            DataContext = this;
-            LstClasses.SelectedIndex = 0;
+            DataContext = this;            
             Character = new Character();
             Character.Class = Classes.First();
+            
+            
         }
 
         private void InitializeClasses()
         {
-            Classes = new List<CharacterClass>
+            Classes = new ObservableCollection<CharacterClass>
             {
                 new CharacterClass("Barbare",_imageFolder, _imageExtension, _iconExtension),
                 new CharacterClass("Barde",_imageFolder, _imageExtension, _iconExtension),
@@ -70,8 +72,6 @@ namespace RPGCharacter
                 new CharacterClass("Rodeur",_imageFolder, _imageExtension, _iconExtension),
                 new CharacterClass("Roublard",_imageFolder, _imageExtension, _iconExtension),
             };
-
-            LstClasses.ItemsSource = Classes;
         }
 
         private void LstClasses_SelectionChanged(object sender, SelectionChangedEventArgs e)

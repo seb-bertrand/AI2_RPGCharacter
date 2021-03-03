@@ -22,7 +22,8 @@
                     <Button Content="Caractéristiques" Style="{StaticResource MenuButtonStyle}" />
                 </StackPanel>               
             </StackPanel>
-            <Border Padding="15" x:Name="FormBorder" BorderBrush="Black" BorderThickness="0,0,0,2.5" Background="{DynamicResource SelectedClassBackground}" DockPanel.Dock="Top">
+            <Expander Header="Infos" DockPanel.Dock="Top">
+                <Border Padding="15" x:Name="FormBorder" BorderBrush="Black" BorderThickness="0,0,0,2.5" Background="{DynamicResource SelectedClassBackground}" >
                 <WrapPanel HorizontalAlignment="Center">
                     <StackPanel Style="{StaticResource FormSectionPanel}">
                         <StackPanel>
@@ -39,11 +40,14 @@
                         <ListBox x:Name="LstClasses" SelectionMode="Single" 
                                  SelectionChanged="LstClasses_SelectionChanged" 
                                  SelectedItem="{Binding Character.Class}"
+                                 ItemsSource="{Binding Classes}"
                                  ItemTemplate="{StaticResource LstClassesDataTemplate}" />
                     </StackPanel>
                 </WrapPanel>
             </Border>
-            <Grid HorizontalAlignment="Center" Margin="0,50,0,0" DockPanel.Dock="Top" >
+            </Expander>
+            <Expander Header="Caractéristiques" DockPanel.Dock="Top" >
+                <Grid HorizontalAlignment="Center" Margin="0,50,0,0" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="150" />
                     <ColumnDefinition Width="150" />
@@ -125,6 +129,10 @@
 
                 <Image x:Name="ImgClass" Source="{Binding Character.Class.ClassImage}" Height="250" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center"  />
             </Grid>
+            </Expander>
+            <Expander Header="Inventaire" DockPanel.Dock="Top">
+                <!-- TODO : Ajouter la gestion d'inventaire -->
+            </Expander>
         </DockPanel>
     </ScrollViewer>
 </Window>
