@@ -26,18 +26,19 @@
                 <WrapPanel HorizontalAlignment="Center">
                     <StackPanel Style="{StaticResource FormSectionPanel}">
                         <StackPanel>
-                            <Label Content="Nom"  Style="{StaticResource FormLabel}" />
-                            <TextBox x:Name="txtFirstName" Style="{StaticResource FormTextBox}"/>
+                            <Label Content="Prénom"  Style="{StaticResource FormLabel}" />
+                            <TextBox x:Name="txtFirstName" Text="{Binding Character.FirstName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource FormTextBox}"/>
                         </StackPanel>
                         <StackPanel>
-                            <Label Content="Prénom" Style="{StaticResource FormLabel}"  />
-                            <TextBox x:Name="txtLastName" Style="{StaticResource FormTextBox}" />
+                            <Label Content="Nom" Style="{StaticResource FormLabel}"  />
+                            <TextBox x:Name="txtLastName" Text="{Binding Character.LastName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource FormTextBox}" />
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Style="{StaticResource FormSectionPanel}">
                         <Label Content="Classe" Style="{StaticResource FormLabel}" />
                         <ListBox x:Name="LstClasses" SelectionMode="Single" 
-                                 SelectionChanged="LstClasses_SelectionChanged"                                  
+                                 SelectionChanged="LstClasses_SelectionChanged" 
+                                 SelectedItem="{Binding Character.Class}"
                                  ItemTemplate="{StaticResource LstClassesDataTemplate}" />
                     </StackPanel>
                 </WrapPanel>
@@ -62,8 +63,8 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Label Content="{Binding ElementName=txtFirstName, Path=Text, Mode=OneWay}" FontSize="24" />
-                    <Label Content="{Binding ElementName=txtLastName, Path=Text,  Mode=OneWay}" FontSize="24" />
+                    <Label Content="{Binding Character.FirstName}" FontSize="24" />
+                    <Label Content="{Binding Character.LastName}" FontSize="24" />
                 </StackPanel>
                 <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" 
                        Content="{Binding ElementName=LstClasses, Path=SelectedItem.Label}" FontSize="14" />
@@ -122,7 +123,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <Image x:Name="ImgClass" Height="250" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center"  />
+                <Image x:Name="ImgClass" Source="{Binding }" Height="250" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center"  />
             </Grid>
         </DockPanel>
     </ScrollViewer>
