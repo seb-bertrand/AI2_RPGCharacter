@@ -34,7 +34,11 @@
                             <Label Content="Nom" Style="{StaticResource FormLabel}"  />
                             <TextBox x:Name="txtLastName" Text="{Binding Character.LastName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource FormTextBox}" />
                         </StackPanel>
-                    </StackPanel>
+                            <StackPanel>
+                                <Label Content="Poids maximum" />
+                                <TextBox Style="{StaticResource FormTextBox}" Text="{Binding Character.MaxWeight, UpdateSourceTrigger=PropertyChanged}"/>
+                            </StackPanel>
+                        </StackPanel>
                     <StackPanel Style="{StaticResource FormSectionPanel}">
                         <Label Content="Classe" Style="{StaticResource FormLabel}" />
                         <ListBox x:Name="LstClasses" SelectionMode="Single" 
@@ -131,7 +135,32 @@
             </Grid>
             </Expander>
             <Expander Header="Inventaire" DockPanel.Dock="Top">
-                <!-- TODO : Ajouter la gestion d'inventaire -->
+                <StackPanel Margin="15">
+                    <StackPanel Style="{StaticResource FormSectionPanel}" HorizontalAlignment="Left">
+                        <Label Content="Ajouter un objet" FontSize="22" />
+                        <StackPanel>
+                            <Label Content="Label"  />
+                            <TextBox Style="{StaticResource FormTextBox}" Text="{Binding NewItem.Label, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <Label Content="Description" />
+                            <TextBox Style="{StaticResource FormTextBox}" Text="{Binding NewItem.Description, UpdateSourceTrigger=PropertyChanged}" Height="100" AcceptsReturn="True" VerticalContentAlignment="Top"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <Label Content="Poids" />
+                            <TextBox Style="{StaticResource FormTextBox}" Text="{Binding NewItem.Weight, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <Label Content="Valeur" />
+                            <TextBox Style="{StaticResource FormTextBox}" Text="{Binding NewItem.Value, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <Button Content="Ajouter" x:Name="BtAdd" Click="BtAdd_Click" Margin="10,25,10,25" Width="150" HorizontalAlignment="Left" />
+                    <StackPanel HorizontalAlignment="Left">
+                        <Label Content="Inventaire" FontSize="22" />
+                        <DataGrid ItemsSource="{Binding Character.Items}"  />
+                    </StackPanel>
+                </StackPanel>
             </Expander>
         </DockPanel>
     </ScrollViewer>

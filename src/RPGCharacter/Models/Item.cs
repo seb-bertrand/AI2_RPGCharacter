@@ -1,20 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace RPGCharacter.Models
 {
-    public class CharacterClass : INotifyPropertyChanged
+    public class Item : INotifyPropertyChanged
     {
-        public CharacterClass(string label, string imageFolderPath, string imageExtension, string iconExtension)
-        {
-            Label = label;
-            ClassIcon = imageFolderPath + label + "_Icon" + iconExtension;
-            ClassImage = imageFolderPath + label + imageExtension;
-        }
 
         private string _label;
         public string Label
@@ -27,36 +20,40 @@ namespace RPGCharacter.Models
             }
         }
 
-        private string _classIcon;
-        public string ClassIcon
+        private string _description;
+        public string Description
         {
-            get { return _classIcon; }
+            get { return _description; }
             set
             {
-                _classIcon = value;
+                _description = value;
                 OnPropertyChanged();
             }
         }
 
-        private string _classImage;
-        public string ClassImage
+        private double _weight;
+        public double Weight
         {
-            get { return _classImage; }
+            get { return _weight; }
             set
             {
-                _classImage = value;
+                _weight = value;
                 OnPropertyChanged();
             }
         }
 
-
-        public override string ToString()
+        private int _value;
+        public int Value
         {
-            return Label;
+            get { return _value; }
+            set
+            {
+                _value = value;
+                OnPropertyChanged();
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             if (PropertyChanged != null)
